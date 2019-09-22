@@ -12,13 +12,6 @@ The fonts used are all open source fonts.
 Make sure you have weasyprint installed as per instructions :
 https://weasyprint.readthedocs.io/en/stable/install.html
 
-### Mac
-On mac you'll have to install some stuff with Homebrew, so read the guide.
-
-Install the requirements from file:
-
-```pip install -r requirements.txt```
-
 ## Usage
 
 Export the documents as HTML (File &gt; Download &gt; HTML page...) from Google docs and place in ./srcdocs

@@ -1,4 +1,3 @@
-from colour import Color
 from PIL import Image, ImageDraw, ImageFont
 import os, random, pathlib, time, sys
 fonts = []
@@ -19,8 +18,7 @@ def generateImage():
         randomShape( img, d )
         randomText( 'NDSM', d, H / 2- 50 )
         randomText( 'OPEN', d, H / 2 + 10 )
-
-        # d.rectangle((0,0,W-1,H-1),outline=(0,0,0))
+        
         timestr = time.strftime( "%Y-%m%d-%H%M%S" )
         filename = "image-%s-%d.png" % ( timestr, i )
         i = i + 1
@@ -54,6 +52,7 @@ def circle( drw ):
 def rect( drw ):
     drw.rectangle(randomBox(), fill=randomColor())
 
+# creates the coordinates for a centered box
 def randomBox():
     w = random.randint(20,W)
     h = random.randint(20,H)
