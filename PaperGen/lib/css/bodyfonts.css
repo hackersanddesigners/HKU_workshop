@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Nadia Serif';
+    src: url('../fonts/body/NadiaSerifNormal.woff2') format('woff2'),
+        url('../fonts/body/NadiaSerifNormal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotCourierSans';
+    src: url('../fonts/body/NotCourierSans.woff2') format('woff2'),
+        url('../fonts/body/NotCourierSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotCourierSans-bold';
+    src: url('../fonts/body/NotCourierSans-Bold.woff2') format('woff2'),
+        url('../fonts/body/NotCourierSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ovo';
+    src: url('../fonts/body/Ovo.woff2') format('woff2'),
+        url('../fonts/body/Ovo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montaga';
+    src: url('../fonts/body/Montaga-Regular.woff2') format('woff2'),
+        url('../fonts/body/Montaga-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bodyfont-1 {
+    font-family: 'Nadia Serif' !important;
+}
+
+.bodyfont-2 {
+    font-family: 'NotCourierSans' !important;
+}
+
+.bodyfont-3 {
+    font-family: 'NotCourierSans-bold' !important;
+}
+
+.bodyfont-4 {
+    font-family: 'Ovo' !important;
+}
+
+.bodyfont-5 {
+    font-family: 'Montaga' !important;
+}

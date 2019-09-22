@@ -1,0 +1,151 @@
+/* @import "bodyfonts.css"; */
+/* @import "headingfonts.css"; */
+
+/* grab the document titles and store in variable */
+article > h1{
+	string-set: doctitle content();
+}
+
+/* Default left, right, top, bottom margin is 2cm */
+@page {
+	margin: 2cm;
+	size: 260mm 380mm;
+	marks: crop cross; /* comment out to remove the crop marks */
+	border: 1px solid black;
+	padding: 1cm;
+}
+
+/* Default left, right, top, bottom margin is 2cm */
+@page:left {
+	padding-right: 20%;
+	@top-left{
+		content: string(doctitle); /* use the h1 content value as title heading */
+		font-family: 'NotCourierSans';
+		font-size: 10pt;
+		/* transform: rotate( -90deg ); */
+		white-space: nowrap;
+	}
+}
+
+/* Default left, right, top, bottom margin is 2cm */
+@page:right {
+	padding-left: 20%;
+	@top-right{
+		font-size: 9pt;
+		content: counter(page);
+		font-family: 'NotCourierSans';
+	}
+}
+
+/* General styling */
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	font-size: 8pt;
+}
+
+h1{
+	font-size: 70px;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+h2{
+	text-align: center;
+	/* column-span: all;; */
+}
+
+/* h1, h2 {
+	page-break-before: avoid;
+	page-break-after: avoid;
+}
+
+article{
+	page-break-before: avoid;
+	page-break-after: avoid;
+} */
+
+p {
+	orphans:3;
+	widows:3;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+img {
+	width: 100%;
+	height: auto !important;
+}
+
+/* div.test{
+	color: red;
+	font-size: 300px;
+} */
+
+
+
+/* Column classes get generated in Python */
+.columns{
+	columns: 2;
+	column-fill: balance; /* try these values: auto | balance | balance-all */
+}
+
+.columns > p:first-of-type {
+	margin-top: 0;
+}
+
+.columns > div:first-of-type > p {
+    display: none;
+}
+
+.columns.cols-3{
+	columns: 3;
+}
+
+.columns.cols-4{
+	columns: 4;
+}
+
+.columns.cols-5{
+	columns: 5;
+}
+
+.columns.cols-6{
+	columns: 6;
+}
+
+div.article-rnd{
+	columns: 1;
+}
+
+article p.hasdot:before{
+	content: '';
+	position: absolute;
+	top: 20%;
+	left: 44%;
+	width: 2cm;
+	height: 2cm;
+	background: yellow;
+	border-radius: 100%;
+	display: block;
+	z-index: -100;
+}
+
+article p.haslogo:before{
+	content: '';
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-image: url( '../logos/image-2019-0919-131920-0.png' );
+	background-size: 100% 100%;
+	display: block;
+	z-index: -100;
+}
