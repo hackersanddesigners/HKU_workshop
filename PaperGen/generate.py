@@ -154,8 +154,8 @@ def formatDocument( content, idx ):
     for img in soup.select( 'img' ):
         img[ 'src' ] = 'clean/' + img[ 'src' ] # adjust image path
 
-    # rndDots( soup, idx )
-    rndLogos( soup, idx )
+    rndDots( soup, idx )
+    #rndLogos( soup, idx )
 
     # get the style tag from head and turn it into a style scoped to the article
     # this isnt going to be pretty...
