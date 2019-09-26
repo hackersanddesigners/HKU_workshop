@@ -64,7 +64,7 @@ def mainComp( files ):
     edits = []
     while duration_left > 0:
         seg = randomEdit( files, duration_left )
-        audios.append( aud ) # kopie van de audio van dit segment bewaren we in de lijst audios
+        audios.append( seg.audio ) # kopie van de audio van dit segment bewaren we in de lijst audios
         seg = effectsGenerator( seg )
         duration_left -= seg.duration
         print( "duration left: %s" % duration_left )
